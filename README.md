@@ -37,6 +37,7 @@ Things you may want to cover:
 ## usersテーブル
 
 |Column|Type|Options|
+|------|----|-------|
 |name|string|null: false, index: true|
 |email|varcher|null: false|
 |password|integer|null: false|
@@ -49,6 +50,7 @@ Things you may want to cover:
 ## groupテーブル
 
 |Column|Type|Options|
+|------|----|-------|
 |group|string|null: false, index: true|
 
 ### Association
