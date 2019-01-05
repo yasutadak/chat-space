@@ -1,0 +1,33 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.posts {
+  height: 90px;
+  width: 100%;
+  background-color: #dcdcdc;
+  position: fixed;
+  bottom: 0;
+
+  &__text-field {
+    float: left;
+    line-height: 50px;
+    font-size: 16px;
+    background-color: white;
+    width: 65%;
+    margin: 20px 0 20px 50px;
+  }
+
+  &__submit {
+    float: left;
+    height: 50px;
+    width: 100px;
+    background-color: #00bfff;
+    margin: 20px 40px 20px 15px;
+    font-size: 20px;
+    color: white;
+  }
+}
+
