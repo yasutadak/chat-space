@@ -5,9 +5,7 @@ html, body {
   padding: 0;
 }
   .main__footer {
-    height: 90px;
-    width: calc(100% - 300px);
-    background-color: #dcdcdc;
+    @include footer-style();
     position: fixed;
     bottom: 0;
 
