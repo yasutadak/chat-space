@@ -1,0 +1,35 @@
+%body
+
+.sidebar
+  .sidebar__user
+    .sidebar__user-content yasutada
+    .sidebar__icons
+      .sidebar__icons__new-group
+        .sidebar__icons__new-group--pencil-square-o{href: "/groups/new"}
+          %i.fa.fa-pencil-square-o
+      .sidebar__icons__edit-user
+        .sidebar__icons__edit-user--gear{href: "/users/edit"}
+          %i.fa.fa-gear
+
+  .sidebar__group
+    .sidebar__group-name sample
+    .sidebar__group-message なるほど
+
+.main
+  .main__header
+    .main__header-name sampleグループ
+    .main__header-user Member: yasutada
+    %button.main__header-edit{type: "submit"} Edit
+  %ul.main__message
+    %li.main__message-name yasutada
+    %li.main__message-time 2019/01/04 06:27:07
+    %li.main__message-text なるほど
+
+    .main__footer
+      %form.main__footer-form
+      .main__footer-body
+        %input.main__footer-body__textfield{type: "text", placeholder: "type a message"}
+          %label.upload-label{for: "upload-icon"}
+            %i.fa.fa-picture-o
+            %input.image{ id: "upload-icon", type: "file"}
+          %button.main__footer-body__submit{type: "submit"} Send

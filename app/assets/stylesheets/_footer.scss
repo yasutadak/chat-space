@@ -1,0 +1,36 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+  .main__footer {
+    @include footer-style();
+    position: fixed;
+    bottom: 0;
+
+    &-body {
+      position: relative;
+      height: 90px;
+      width: 103%;
+
+      &__textfield {
+        height: 50px;
+        width: 80%;
+        float: left;
+        line-height: 50px;
+        font-size: 16px;
+        background-color: white;
+        margin: 20px 15px 20px 40px;
+      }
+
+      &__submit {
+        height: 55px;
+        width: 100px;
+        background-color: #00bfff;
+        margin: 20px 40px 0 0;
+        font-size: 20px;
+        color: white;
+      }
+    }
+  }

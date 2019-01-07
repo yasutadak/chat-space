@@ -1,0 +1,5 @@
+@mixin footer-style() {
+  height: 90px;
+  width: calc(100% - 300px);
+  background-color: #dcdcdc;
+}
