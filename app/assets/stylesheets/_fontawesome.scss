@@ -1,0 +1,49 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.sidebar__icons {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: FontAwesome;
+
+  &__new-group {
+    width: 40px;
+    float: left;
+    font-size: 20px;
+    line-height: 100px;
+    text-align: center;
+
+    &--pencil-square-o {
+      color: white;
+    }
+  }
+
+  &__edit-user {
+    width: 40px;
+    float: left;
+    font-size: 20px;
+    line-height: 100px;
+    text-align: center;
+    &--gear {
+      color: white;
+    }
+  }
+}
+
+input.image {
+  display: none;
+}
+
+.fa.fa-picture-o {
+  position: absolute;
+  top: 40px;
+  left: 950px;
+}
