@@ -14,28 +14,14 @@ html, body {
   right: 0;
   font-family: FontAwesome;
 
-  .icon {// &__new-group {
+  .icon {
     width: 40px;
     float: left;
     font-size: 20px;
     line-height: 100px;
     text-align: center;
     color: white;
-    // &--pencil-square-o {
-    //   color: white;
-    // }
   }
-
-  // &__edit-user {
-  //   width: 40px;
-  //   float: left;
-  //   font-size: 20px;
-  //   line-height: 100px;
-  //   text-align: center;
-  //   &--gear {
-  //     color: white;
-  //   }
-  // }
 }
 
 input.image {

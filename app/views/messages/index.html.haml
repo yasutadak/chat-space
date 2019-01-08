@@ -2,18 +2,17 @@
 
 .sidebar
   .sidebar__user
-    .sidebar__user-content = current_user.name
+    .sidebar__user-content
+      = current_user.name
     .sidebar__icons
       .sidebar__icons__new-group
         = link_to do
-          = fa_icon 'fa-pencil-square-o', class: 'icon'
-        / .sidebar__icons__new-group--pencil-square-o{href: "/groups/new"}
-          / %i.fa.fa-pencil-square-o
+          = fa_icon 'pencil-square-o', class: 'icon'
+
       .sidebar__icons__edit-user
         = link_to edit_user_path(current_user) do
           = fa_icon 'cog', class: 'icon'
-        / .sidebar__icons__edit-user--gear{href: "/users/edit"}
-        /   %i.fa.fa-gear
+
 
   .sidebar__group
     .sidebar__group-name sample
