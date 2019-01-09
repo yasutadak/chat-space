@@ -5,6 +5,10 @@ html, body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .sidebar {
   height: 100%;
   width: 300px;
@@ -40,6 +44,3 @@ html, body {
     }
   }
 }
-
-
-
