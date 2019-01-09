@@ -1,22 +1,6 @@
 %body
 
-.sidebar
-  .sidebar__user
-    .sidebar__user-content
-      = current_user.name
-    .sidebar__icons
-      .sidebar__icons__new-group
-        = link_to do
-          = fa_icon 'pencil-square-o', class: 'icon'
-
-      .sidebar__icons__edit-user
-        = link_to edit_user_path(current_user) do
-          = fa_icon 'cog', class: 'icon'
-
-
-  .sidebar__group
-    .sidebar__group-name sample
-    .sidebar__group-message なるほど
+=render 'shared/sidebar'
 
 .main
   .main__header
