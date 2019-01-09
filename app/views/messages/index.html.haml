@@ -12,11 +12,19 @@
     %li.main__message-time 2019/01/04 06:27:07
     %li.main__message-text なるほど
 
-    .main__footer
-      %form.main__footer-form
-      .main__footer-body
-        %input.main__footer-body__textfield{type: "text", placeholder: "type a message"}
-          %label.upload-label{for: "upload-icon"}
-            %i.fa.fa-picture-o
-            %input.image{ id: "upload-icon", type: "file"}
-          %button.main__footer-body__submit{type: "submit"} Send
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+    / .main__footer
+    /   %form.main__footer-form
+    /   .main__footer-body
+    /     %input.main__footer-body__textfield{type: "text", placeholder: "type a message"}
+    /       %label.upload-label{for: "upload-icon"}
+    /         %i.fa.fa-picture-o
+    /         %input.image{ id: "upload-icon", type: "file"}
+    /       %button.main__footer-body__submit{type: "submit"} Send
