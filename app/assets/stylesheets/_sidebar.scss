@@ -31,7 +31,7 @@ a {
   &__group {
     width: 100%;
     height: calc(100% - 100px);
-    background-color: #2f3e51;
+    background-color: $side_blue_light;
     &-name {
       font-size: 15px;
       color: $sidebar-color;
