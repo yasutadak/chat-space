@@ -7,10 +7,8 @@
     .main__header-name sampleグループ
     .main__header-user Member: yasutada
     %button.main__header-edit{type: "submit"} Edit
-  %ul.main__message
-    %li.main__message-name yasutada
-    %li.main__message-time 2019/01/04 06:27:07
-    %li.main__message-text なるほど
+  .message
+    = render @messages
 
     .form
       = form_for [@group, @message] do |f|
