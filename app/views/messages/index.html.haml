@@ -5,7 +5,10 @@
 .main
   .main__header
     .main__header-name sampleグループ
-    .main__header-user Member: yasutada
+    .main__header-user
+      %p Member:
+      - @group.users.each do |user|
+        = user.name
     %button.main__header-edit{type: "submit"} Edit
   .message
     = render @messages
