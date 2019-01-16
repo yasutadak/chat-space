@@ -36,6 +36,7 @@ $(function(){
       $('.message').append(html);
       $('.form__message').val('')
       $('.form__submit').prop('disabled', false);
+      $('form')[0].reset();
       scroll()
     })
     .fail(function(){
