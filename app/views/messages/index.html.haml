@@ -4,12 +4,13 @@
 
 .main
   .main__header
-    .main__header-name sampleグループ
+    .main__header-name
+      = @group.name
     .main__header-user
       %p Member:
       - @group.users.each do |user|
         = user.name
-    %button.main__header-edit{type: "submit"} Edit
+    = link_to 'Edit', edit_group_path(@group.id), class: 'main__header-edit', method: :get
   .message
     = render @messages
 
