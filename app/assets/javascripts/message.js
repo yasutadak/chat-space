@@ -43,36 +43,31 @@ $(function(){
       $('.form__submit').prop('disabled', false);
     })
   })
-
-  $(function(){
-    $(function(){
-      if(location.href.match(/\/groups\/\d+\/messages/)){
-          setInterval(update, 5000);
-      }
-    });
-    function update(){
-      if($('.message')[0]){
-        var message_id = $('.main__message:last').data('id');
-      } else {
-        var message_id = 0
-      }
-      $.ajax({
-        type: 'GET',
-        url: location.href,
-        data: {
-          message: { id: message_id }
-        },
-        dataType: 'json'
-      })
-      .done(function(data){
-        data.forEach(function(data){
-          var html = buildHTML(data);
-          $('.message').append(html);
-        })
-      })
-      .fail(function(data){
-        alert('自動更新に失敗しました')
-      })
+  if(location.href.match(/\/groups\/\d+\/messages/)){
+      setInterval(update, 5000);
+  }
+  function update(){
+    if($('.message')[0]){
+      var message_id = $('.main__message:last').data('id');
+    } else {
+      var message_id = 0
     }
-  });
+    $.ajax({
+      type: 'GET',
+      url: location.href,
+      data: {
+        message: { id: message_id }
+      },
+      dataType: 'json'
+    })
+    .done(function(data){
+      data.forEach(function(data){
+        var html = buildHTML(data);
+        $('.message').append(html);
+      })
+    })
+    .fail(function(data){
+      alert('自動更新に失敗しました')
+    })
+  }
 });
